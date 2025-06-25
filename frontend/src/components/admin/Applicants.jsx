@@ -15,7 +15,7 @@ const Applicants = () => {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await axios.get(`https://jobhunt-nsh5.onrender.com/api/v1/applicants/status/${params.id}/applicants`, { withCredentials: true });
+                const res = await axios.get(`https://jobhunt-nsh5.onrender.com/api/v1/applicants/${params.id}/applicants`, { withCredentials: true });
                 dispatch(setAllApplicants(res.data.job));
             } catch (error) {
                 console.log(error);
